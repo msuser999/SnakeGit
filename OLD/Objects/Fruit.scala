@@ -3,9 +3,9 @@ import scala.collection.mutable.ArrayBuffer
 import scala.util.Random
 
 //Pelin hedelmä 
-class Fruit(var bigFruit: Boolean) {
-  var x = -10
-  var y = -10
+class Fruit() {
+  var x = 0
+  var y = 0
   
   def newCoords(shapes: ArrayBuffer[Shape], obstacles: ArrayBuffer[Shape]) { //HEDELMÄN UUDEN PAIKAN ARPOMINEN
     var loop = true

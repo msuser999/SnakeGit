@@ -5,7 +5,7 @@ import scala.collection.mutable.ArrayBuffer
 
 //Mato eli kokelma Shape-olioita, täällä madon toteutus
 class Snake {
-  var shapes = ArrayBuffer[Shape](new Shape(90, 120))
+  var shapes = ArrayBuffer[Shape](new Shape(210, 210))
   var dir = Direction.Right
   var growBoolean = true
   var moveBoolean = true
@@ -13,7 +13,7 @@ class Snake {
   def move(): Unit = { //MADON LIIKUTTAMINEN
     if (dir == Direction.Left) { //Liikkumisen suunta rippuu madon suunnasta
       shapes += new Shape(head().x - 10, head().y)
-      
+
     } else if (dir == Direction.Right) {
       shapes += new Shape(head().x + 10, head().y)
 
@@ -86,7 +86,7 @@ class Snake {
   }
 
   def head(): Shape = { //MADON PÄÄ
-    return shapes(shapes.size - 1) //Jostain syystä pelkkä oliomuuttuja madon päälle ei toiminut
+    return shapes(shapes.size - 1) //Jostain syystä pelkkä oliomuuttuja päälle ei toiminut halutusti
   }
 
 }
